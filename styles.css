@@ -1,0 +1,366 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-image: url("background-cat1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+}
+
+
+/* Header Styles */
+header {
+    position: fixed;  /* ยึด header ไว้กับที่ */
+    top: 0;  /* ยึดที่ด้านบนของหน้าจอ */
+    width: 100%;  /* ให้ header กว้างเต็มหน้าจอ */
+    z-index: 1000;  /* จัดลำดับให้อยู่เหนือเนื้อหาอื่น */
+    background-color: #ffb6c1;  /* พื้นหลังของ header */
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-left-img, .header-right-img {
+    width: 50px;  /* ขนาดรูปภาพ */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10%;  /* ทำให้รูปภาพเป็นวงกลม */
+}
+
+.header-content {
+    flex: 1;  /* ให้เนื้อหาอยู่ตรงกลาง */
+    text-align: center;
+}
+
+header h1, header h3 {
+    margin: 0;
+}
+/* ป้องกันไม่ให้ header ทับเนื้อหาด้านล่าง */
+body {
+    padding-top: 90px;  /* เพิ่ม padding เพื่อเว้นพื้นที่ด้านบนให้ header */
+}
+
+
+/*กล่องเมนูซ้ายมือ*/
+nav ul { 
+    list-style-type: none;
+    margin: 0;
+    /* padding: 10px; */
+    position: fixed;
+    height: 100%;
+    padding: 20px;
+    width: 100px;
+    background-color: #ffe4e1;
+    /* text-align: center; */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff69b4;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-direction: row; /* จัดให้อยู่ในรูปแบบคอลัมน์ */
+    align-items: flex-start; /* จัดให้อยู่ตรงกลางแนวนอน */
+    justify-content: space-between;
+}
+
+.text-content{
+    flex: 1;
+    text-align: left;
+}
+
+.text-content p{
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    flex: 5;  
+    text-align: center;  
+    line-height: 1.6; /* เพิ่มระยะบรรทัดเพื่อให้ดูอ่านง่ายขึ้น */
+}
+
+.dropdown {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    /* margin-top: 10px; เพิ่มระยะห่างระหว่าง dropdown กับข้อความ */
+}
+
+.about-container img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 20%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1rem; 
+}
+
+#contact ul li img {
+    width: 30px; /* ขนาดรูปภาพ */
+    height: 30px;
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่างรูปภาพกับข้อความ */
+}
+
+/* Navbar Hover with Emoji */
+nav ul li a:hover::after {
+    content: " 🎉"; /* เพิ่มอิโมจิเมื่อ hover */
+    font-size: 1.2rem;
+}
+
+/* Section Styles */
+section {
+    padding: 5px;
+    margin: 20px auto;
+    background-color: #ffe4e1;
+    border-radius: 10px;
+    width: 70%; /* ลดความกว้างของกล่อง */
+    max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    scroll-margin-top: 100px; /* ปรับค่าตามความสูงของ header */
+}
+
+section:hover {
+    transform: scale(1.03); /* ลดระดับการขยายเมื่อ hover */
+}
+
+
+section img {
+    max-width: 15%; /* ปรับขนาดภาพให้ไม่ใหญ่เกินไป */
+    height: auto;
+    border-radius: 20%;
+    display: block;
+    margin: 0;
+}
+
+section .contact img{
+    max-width: 20%; /* ปรับขนาดภาพให้ไม่ใหญ่เกินไป */
+    height: auto;
+    border-radius: 20%;
+    display: block;
+    margin: 0;
+}
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px; /* ลดความกว้างของ timeline */
+    margin: 0 auto;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* ป้องกันการทับซ้อนของเนื้อหา */
+}
+
+.timeline-event img {
+    width: 100px; /* ปรับขนาดรูปภาพให้เล็กลง */
+    height: 100px;
+    border-radius: 10%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.event-content {
+    background-color: #fff0f5;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px; /* ป้องกันไม่ให้กล่องเนื้อหาเล็กเกินไป */
+}
+
+.event-content h3 {
+    margin-top: 0;
+    color: #ff69b4;
+}
+
+/* Contact Section */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    font-size: 1rem; /* ลดขนาดข้อความ */
+}
+
+#contact ul li a {
+    text-decoration: none;
+    color: #ff69b4;
+}
+
+#contact ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Style for the form section */
+.post-section {
+    background-color: #ffe4e1;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+}
+
+.post-section h2 {
+    color: #333; 
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.post-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.post-section input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.post-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Comic Sans MS;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-section button:hover {
+    background-color: #c4146c;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .timeline-event {
+        flex-direction: column; /* ให้ timeline แสดงผลเป็น column บนจอขนาดเล็ก */
+        align-items: flex-start;
+    }
+
+    .timeline-event img {
+        margin-bottom: 10px; /* เว้นระยะระหว่างรูปและเนื้อหาบนจอขนาดเล็ก */
+    }
+    
+    section {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+.dropdown{
+    position: relative;
+    padding: 0px;
+    display: inline-block;
+}
+.dropdown button{
+    background-color: #e587bb;
+    color: #fff;
+    font-size: 18px;
+    font-family: Comic Sans MS;
+    padding: 0px 4px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown .content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(230, 230, 230, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown .content{
+    position: relative;
+    background-color: rgb(196, 182, 165);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black ;
+}
+
+.dropdown:hover .content{
+    display: block;
+}
+
+.dropdown:hover button{
+    background-color: #6d6c69;
+}
+
+.dropdown a:hover{
+    background-color: #f8fbf8;
+}
