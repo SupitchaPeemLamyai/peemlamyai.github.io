@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Comic Sans MS', sans-serif;
     background-image: url("background-cat1.jpg");
@@ -12,14 +11,12 @@ body {
     transition: background-color 0.5s ease;
 }
 
-
-/* Header Styles */
 header {
-    position: fixed;  /* ยึด header ไว้กับที่ */
-    top: 0;  /* ยึดที่ด้านบนของหน้าจอ */
-    width: 100%;  /* ให้ header กว้างเต็มหน้าจอ */
-    z-index: 1000;  /* จัดลำดับให้อยู่เหนือเนื้อหาอื่น */
-    background-color: #ffb6c1;  /* พื้นหลังของ header */
+    position: fixed;  
+    top: 0;  /* ยึดไว้บนสุดของจอ */
+    width: 100%;  /* ให้ header กว้างเต็มจอ */
+    z-index: 1000;  /* ให้เนื้อหาอยู่เลเยอร์บนๆ */
+    background-color: #ffb6c1;  
     padding: 10px 0;
 }
 
@@ -31,10 +28,10 @@ header {
 }
 
 .header-left-img, .header-right-img {
-    width: 50px;  /* ขนาดรูปภาพ */
+    width: 50px;  
     height: 50px;
     object-fit: cover;
-    border-radius: 10%;  /* ทำให้รูปภาพเป็นวงกลม */
+    border-radius: 10%; 
 }
 
 .header-content {
@@ -45,7 +42,7 @@ header {
 header h1, header h3 {
     margin: 0;
 }
-/* ป้องกันไม่ให้ header ทับเนื้อหาด้านล่าง */
+/* ไม่ให้ header ทับเนื้อหาด้านล่าง */
 body {
     padding-top: 90px;  /* เพิ่ม padding เพื่อเว้นพื้นที่ด้านบนให้ header */
 }
@@ -55,13 +52,11 @@ body {
 nav ul { 
     list-style-type: none;
     margin: 0;
-    /* padding: 10px; */
     position: fixed;
     height: 100%;
     padding: 20px;
     width: 100px;
     background-color: #ffe4e1;
-    /* text-align: center; */
 }
 
 nav ul li {
@@ -81,10 +76,9 @@ nav ul li a:hover {
     color: #ff69b4;
 }
 
-/* About Section */
 .about-container {
     display: flex;
-    flex-direction: row; /* จัดให้อยู่ในรูปแบบคอลัมน์ */
+    flex-direction: row; /* จัดให้อยู่ในรูปแบบแถว */
     align-items: flex-start; /* จัดให้อยู่ตรงกลางแนวนอน */
     justify-content: space-between;
 }
@@ -109,7 +103,6 @@ nav ul li a:hover {
     margin: 0 auto;
     text-align: center;
     width: fit-content;
-    /* margin-top: 10px; เพิ่มระยะห่างระหว่าง dropdown กับข้อความ */
 }
 
 .about-container img {
@@ -121,7 +114,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Contact Section */
+
 #contact ul {
     list-style-type: none;
     padding: 0;
@@ -140,20 +133,18 @@ nav ul li a:hover {
     margin-right: 10px; /* เพิ่มระยะห่างระหว่างรูปภาพกับข้อความ */
 }
 
-/* Navbar Hover with Emoji */
 nav ul li a:hover::after {
     content: " 🎉"; /* เพิ่มอิโมจิเมื่อ hover */
     font-size: 1.2rem;
 }
 
-/* Section Styles */
 section {
     padding: 5px;
-    margin: 20px auto;
+    margin: 20px auto; /*topbottom, leftright*/
     background-color: #ffe4e1;
     border-radius: 10px;
-    width: 70%; /* ลดความกว้างของกล่อง */
-    max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+    width: 70%; 
+    max-width: 1200px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     scroll-margin-top: 100px; /* ปรับค่าตามความสูงของ header */
@@ -179,10 +170,10 @@ section .contact img{
     display: block;
     margin: 0;
 }
-/* Timeline Styles */
+
 .timeline {
     position: relative;
-    max-width: 800px; /* ลดความกว้างของ timeline */
+    max-width: 800px; 
     margin: 0 auto;
 }
 
@@ -223,7 +214,7 @@ section .contact img{
 
 #contact ul li {
     margin-bottom: 10px;
-    font-size: 1rem; /* ลดขนาดข้อความ */
+    font-size: 1rem;
 }
 
 #contact ul li a {
@@ -293,12 +284,12 @@ section .contact img{
     }
 
     .timeline-event {
-        flex-direction: column; /* ให้ timeline แสดงผลเป็น column บนจอขนาดเล็ก */
+        flex-direction: column; /* ให้ timeline แสดงผลเป็น column บนจอเล็ก */
         align-items: flex-start;
     }
 
     .timeline-event img {
-        margin-bottom: 10px; /* เว้นระยะระหว่างรูปและเนื้อหาบนจอขนาดเล็ก */
+        margin-bottom: 10px; /* เว้นระยะระหว่างรูปและเนื้อหาบนจอเล็ก */
     }
     
     section {
